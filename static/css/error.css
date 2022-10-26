@@ -1,0 +1,26 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url(../img/error.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  max-width: 330px;
+  padding: 15px;
+  background-color: #e51837;
+  border-radius: 3%;
+}
+
+.btn {
+  background-color: #fdb927;
+  border-color: #fdb927;
+}

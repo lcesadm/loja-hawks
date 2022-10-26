@@ -16,7 +16,7 @@ body {
 .form-signin {
   max-width: 330px;
   padding: 15px;
-  background-color: #E51837;
+  background-color: #e51837;
   border-radius: 3%;
 }
 
@@ -41,6 +41,6 @@ body {
 }
 
 .btn {
-  background-color: #FDB927;
-  border-color: #FDB927;
+  background-color: #fdb927;
+  border-color: #fdb927;
 }
