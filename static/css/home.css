@@ -1,7 +1,8 @@
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: #5a5a5a;
+  color: #FDB927;
+  background-color: #000;
 }
 
 .carousel {
@@ -51,4 +52,31 @@ body {
   .featurette-heading {
     margin-top: 7rem;
   }
+}
+
+.navbar {
+  background-color: #E51837;
+}
+
+.btn {
+  color: #FFFF;
+  border-color: #FFFF;
+}
+
+.carousel-image1 {
+  background-image: url(../img/carousel1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel-image2 {
+  background-image: url(../img/carousel2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel-image3 {
+  background-image: url(../img/carousel3.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
