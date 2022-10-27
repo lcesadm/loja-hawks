@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loja Atlanta Hawks - Carrinho</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link href="../static/css/carrinho.css" rel="stylesheet" />
+    <link href="../static/img/logo.png" rel="icon" type="image/x-icon" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+          <img src="../static/img/logo.png" alt="" width="70" />
+          <a class="navbar-brand" href="#">Loja Atlanta Hawks</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Carrinho</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search" method="POST">
+              <button
+                class="btn btn-outline-success"
+                type="submit"
+                name="sair"
+                value="sair"
+              >
+                Sair
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <main>
+        <div class="row g-5">
+          <div class="col-md-5 col-lg-4 order-md-last">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="texto-carrinho">Seu Carrinho</span>
+              <span class="badge rounded-pill">3</span>
+            </h4>
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Uniforme</h6>
+                  <small class="text-muted">Atlanta Hawks 2022-23</small>
+                </div>
+                <span class="text-muted">R$599,90</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Shorts</h6>
+                  <small class="text-muted">Atlanta Hawks 2022-23</small>
+                </div>
+                <span class="text-muted">R$349,90</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Boné Preto</h6>
+                  <small class="text-muted">Original Atlanta Hawks</small>
+                </div>
+                <span class="text-muted"> R$99,90</span>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between bg-light"
+              >
+                <div class="text-success">
+                  <h6 class="my-0">Código promocional</h6>
+                  <small>ATLANTAROCKS</small>
+                </div>
+                <span class="text-success">−R$50</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Total (R$)</span>
+                <strong>R$999,70</strong>
+              </li>
+            </ul>
+
+            <form class="card p-2">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Código Promocional"
+                />
+                <button type="submit" class="btn btn-secondary">
+                  Resgatar
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Endereço de cobrança</h4>
+            <form class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="firstName" class="form-label">Nome</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder=""
+                    value=""
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">Sobrenome</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder=""
+                    value=""
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="username" class="form-label">Usuário</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">@</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="username"
+                      placeholder="Usuário"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Your username is required.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="email" class="form-label"
+                    >Email <span class="text-muted">(Opcional)</span></label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="teste@exemplo.com"
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="address" class="form-label">Endereço</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    placeholder="AV. Lins Vasconselos"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter your shipping address.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="address2" class="form-label"
+                    >Endereço 2
+                    <span class="text-muted">(Opcional)</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address2"
+                    placeholder="Casa ou Apto"
+                  />
+                </div>
+
+                <div class="col-md-5">
+                  <label for="country" class="form-label">País</label>
+                  <select class="form-select" id="country" required>
+                    <option value="">Escolher...</option>
+                    <option>Estados Unidos</option>
+                    <option>Brasil</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid country.
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <label for="state" class="form-label">Estado</label>
+                  <select class="form-select" id="state" required>
+                    <option value="">Escolher...</option>
+                    <option>Georgia</option>
+                    <option>São Paulo</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please provide a valid state.
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="zip" class="form-label">CEP</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="zip"
+                    placeholder=""
+                    required
+                  />
+                  <div class="invalid-feedback">Zip code required.</div>
+                </div>
+              </div>
+
+              <hr class="my-4" />
+
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="same-address"
+                />
+                <label class="form-check-label" for="same-address"
+                  >O endereço de entrega é o mesmo para o endereço de
+                  cobrança</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="save-info"
+                />
+                <label class="form-check-label" for="save-info"
+                  >Salvar a informação para a próxima compra</label
+                >
+              </div>
+
+              <hr class="my-4" />
+
+              <h4 class="mb-3">Pagamento</h4>
+
+              <div class="my-3">
+                <div class="form-check">
+                  <input
+                    id="credit"
+                    name="paymentMethod"
+                    type="radio"
+                    class="form-check-input"
+                    checked
+                    required
+                  />
+                  <label class="form-check-label" for="credit"
+                    >Cartão de crédito</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    id="debit"
+                    name="paymentMethod"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="debit"
+                    >Cartão de débito</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    id="paypal"
+                    name="paymentMethod"
+                    type="radio"
+                    class="form-check-input"
+                    required
+                  />
+                  <label class="form-check-label" for="paypal">Pix</label>
+                </div>
+              </div>
+
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <label for="cc-name" class="form-label">Nome no cartão</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cc-name"
+                    placeholder=""
+                    required
+                  />
+                  <small class="text-muted"
+                    >Nome completo impresso no cartão</small
+                  >
+                  <div class="invalid-feedback">Name on card is required</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="cc-number" class="form-label"
+                    >Número do cartão de crédito</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cc-number"
+                    placeholder=""
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Credit card number is required
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="cc-expiration" class="form-label">Validade</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cc-expiration"
+                    placeholder=""
+                    required
+                  />
+                  <div class="invalid-feedback">Expiration date required</div>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="cc-cvv" class="form-label">CVV</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cc-cvv"
+                    placeholder=""
+                    required
+                  />
+                  <div class="invalid-feedback">Security code required</div>
+                </div>
+              </div>
+
+              <hr class="my-4" />
+
+              <button class="w-100 btn btn-primary btn-lg" type="submit">
+                Continua para o pagamento
+              </button>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer class="container">
+        <p class="float-end"><a href="#">Voltar ao topo</a></p>
+        <p>&copy; 2022 Cesarnandes LTDA.</p>
+      </footer>
+    </div>
+  </body>
+</html>

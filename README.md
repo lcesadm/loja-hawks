@@ -1,7 +1,7 @@
 <h1 align="center">loja-hawks</h1>
 <p align="center">
     <img src="/static/img/logo.png" alt="logo" width="300"><br>
-    <img src="https://img.shields.io/badge/status-trabalhando-orange?style=for-the-badge" alt="Status">
+    <img src="https://img.shields.io/badge/status-finalizado-brightgreen?style=for-the-badge" alt="Status">
 </p>
 
 ### Tópicos :large_blue_diamond:
@@ -61,7 +61,8 @@ E por fim, acessa o link de acesso: `http://localhost:5000`
 - [X] Página Index
 - [X] Sistema de login e registrar
 - [X] Página Home
-- [ ] Página Checkout
+- [X] Sistema de carrinho de compras
+- [X] Página Carrinho
 
 ## Integrantes 3ECR :handshake:
 | [<img src="https://avatars.githubusercontent.com/u/60631170" width=115><br><sub>Leonardo Cesar de Mendonça</sub><br><sub>84689</sub>](https://github.com/lcesadm) |  [<img src="https://avatars.githubusercontent.com/u/99697435" width=115><br><sub>Pedro Fernandes</sub><br><sub>84244</sub>](https://github.com/pedrofernandes01) |

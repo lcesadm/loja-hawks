@@ -1,7 +1,7 @@
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: #FDB927;
+  color: #fdb927;
   background-color: #000;
 }
 
@@ -55,12 +55,12 @@ body {
 }
 
 .navbar {
-  background-color: #E51837;
+  background-color: #e51837;
 }
 
 .btn {
-  color: #FFFF;
-  border-color: #FFFF;
+  color: #ffff;
+  border-color: #ffff;
 }
 
 .carousel-image1 {

@@ -6,12 +6,14 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
+
 @app.route("/")
 def init():
     session["email"] = ""
     session["password"] = ""
-    session["cart"] = ""
+    session["cart"] = []
     return redirect("/index")
+
 
 @app.route("/index", methods=['GET', "POST"])
 def indexpage():
@@ -34,16 +36,23 @@ def indexpage():
 
 @app.route("/home", methods=["GET", "POST"])
 def homepage():
-    user = {
-        "email": session.get("email"),
-        "password": session.get("password"),
-        "cart": session.get("cart")
-    }
-    if user["email"] and user["password"]:
-        return render_template("home.html")
-    else:
-        return redirect("/")
-    
+    if request.method == "POST":
+        if request.form.get("sair") == "sair":
+            return redirect("/")
+        if request.form.get("adicionar") == "ADICIONAR":
+            session["cart"].append("hidden")
+            return render_template("home.html", produtos=session["cart"])
+    if session["email"] and session["password"]:
+        return render_template("home.html", produtos=session["cart"])
+    return redirect("/")
+
+
+@app.route("/carrinho", methods=["GET", "POST"])
+def carrinhopage():
+    if session["email"] and session["password"]:
+        return render_template("carrinho.html", carrinho=session["cart"])
+    return redirect("/index")
+
 
 @app.route("/<string:nome>", methods=["GET", "POST"])
 def error(nome):
